@@ -1,0 +1,29 @@
+---
+import MainHead from "../components/MainHead.astro";
+import Nav from "../components/Nav.astro";
+
+interface Props {
+  title?: string | undefined;
+  description?: string | undefined;
+}
+const { title, description } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <MainHead title={title} description={description} />
+  </head>
+  <body>
+    <div>
+      <Nav />
+      <slot />
+    </div>
+
+    <script>
+      // Add “loaded” class once the document has completely loaded.
+      addEventListener("load", () =>
+        document.documentElement.classList.add("loaded")
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+---
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout>
+  <section id="about">
+    <div class="wrapper">
+      <div class="left">
+        <div class="description">
+          <p>
+            artista plástico e músico, residente no Porto. O seu corpo de
+            trabalho estende-se pelos campos do vídeo, movimento, desenho, som,
+            cinética e escultura.
+          </p>
+          <p class="indent">
+            A sua prática artística parte de uma exploração de formas
+            alternativas de construção e interação da máquina e humano como sua
+            extensão. Procura novos sentidos no uso de materiais e associações
+            entre a ideia de objetos autónomos e formas reativas, bem como o
+            espaço onde habitam. Os objetos e situações que cria manifestam
+            maioritariamente ações e comportamentos não expectáveis, simulando
+            organismos.
+          </p>
+        </div>
+
+        <div class="row">
+          <h3>Rodrigo Maia Aroso Ramos</h3>
+          <div class="detail-wrapper">
+            <p class="detail-text">22-06-1996</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <h3>Formação Académica</h3>
+          <div class="detail-wrapper">
+            <p class="detail-text">2014 - 2019</p>
+            <p class="detail-text">
+              Faculdade de Belas Artes da Universidade do Porto
+            </p>
+            <p class="detail-text">
+              Práticas de escultura, Atelier de Escultura,
+            </p>
+            <p class="detail-text">Práticas de Vídeo, Áudio,</p>
+            <p class="detail-text">História da Arte, Desenho</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <h3>Info / Contact</h3>
+          <div class="detail-wrapper">
+            <p class="detail-text">+351 917734664</p>
+            <p class="detail-text">rodrigoo.aroso@gmail.com</p>
+            <p class="detail-text">o.rodrigo.aroso@gmail.com</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="right">
+        <img
+          src="/RodrigoAroso.jpeg"
+          loading="lazy"
+          alt="Rodrigo working on his bench"
+          class="about-image"
+        />
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .wrapper {
+      display: flex;
+    }
+
+    .wrapper > * {
+      flex-basis: 100%;
+    }
+
+    .description {
+      max-width: 45ch;
+      padding-left: 1rem;
+    }
+
+    .description .indent {
+      text-indent: 4ch;
+      margin-bottom: 10rem;
+    }
+
+    .description > p {
+      padding: 0;
+      margin: 0;
+      color: var(--black-50);
+      font-family: var(--font-brand);
+      font-weight: 600;
+      font-size: 1.25rem;
+      line-height: 105%;
+    }
+
+    .row {
+      display: flex;
+      gap: ;
+      padding-left: 1rem;
+      margin: 1em 0 1em 0;
+    }
+
+    .row > h3 {
+      min-width: 30ch;
+      color: var(--black-50);
+      font-family: var(--font-brand);
+      font-weight: 600;
+      font-size: 0.875rem;
+      margin: 0;
+    }
+
+    .detail-text {
+      color: var(--black-50);
+      font-family: "CenturyBook";
+      font-weight: 500;
+      font-size: 0.875rem;
+      margin-top: 0;
+      margin-bottom: 0.875em;
+    }
+
+    .about-image {
+      display: block;
+      float: right;
+    }
+  </style>
+</BaseLayout>
