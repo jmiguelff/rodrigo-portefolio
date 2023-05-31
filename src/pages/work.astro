@@ -1,8 +1,113 @@
 ---
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Work articles component
+import WorkCover from "../components/WorkCover.astro";
 ---
 
 <BaseLayout>
-  <div>Work</div>
+  <section class="2020">
+    <div class="year-label">
+      <p>2020</p>
+    </div>
+    <article>
+      <WorkCover
+        title="duo"
+        label="Exposição colectiva, instalação “Encontrar Um CLICK Num Palheiro” Centro Comercial de Cedofeita, Porto"
+        src="/2020/duo/duocover.jpg"
+        alt="Duo exhibition machines."
+      />
+    </article>
+    <article>
+      <WorkCover
+        title="dunne"
+        label="Instalação, “With Grandpa’s Lab” Fisga, Porto"
+        src="/2020/dune/dunecover.jpg"
+        alt="Matrix of light on textile."
+      />
+    </article>
+    <article>
+      <WorkCover
+        title="díodo"
+        label="Instalação, Ácida, Porto"
+        src="/2020/diodo/diodocover.jpg"
+        alt="Dark image of diodo installation."
+      />
+    </article>
+    <article>
+      <WorkCover
+        title="presença mutável"
+        label="Instalação, Galeria Dentro, Porto"
+        src="/2020/presencamutavel/presencamutavelcover.jpg"
+        alt="Shape getting out of a wall."
+      />
+    </article>
+    <article>
+      <WorkCover
+        title="vídeo instalação"
+        label="Galeria Dentro, Porto"
+        src="/2020/videoinstalacao/videoinstalacaocover.jpg"
+        alt="Wire in the middle of the room."
+      />
+    </article>
+    <article>
+      <WorkCover
+        title="presença luminosa mutável"
+        label="Site-specific, Limina, Porto"
+        src="/2020/presencaluminosa/presencaluminosacover.jpg"
+        alt="Lights from the ceiling."
+      />
+    </article>
+    <article>
+      <WorkCover
+        title="moving cloth"
+        label="Instalação, Limina, Porto"
+        src="/2020/movingcloth/movingclothcover.jpg"
+        alt="Shape with cloth on top."
+      />
+    </article>
+  </section>
+  <section class="2019">
+    <div class="year-label">
+      <p>2019</p>
+    </div>
+    <article>
+      <WorkCover
+        title="mechanic drawing"
+        label="Instalação, TETRIS II, Porto"
+        src="/2019/mechanicdrawing/mechanicdrawingcover.jpg"
+        alt="Drawing robot."
+      />
+    </article>
+    <article>
+      <WorkCover
+        title="organismo vivo"
+        label="Instalação, TETRIS III, Pérola Negra, Porto"
+        src="/2019/organismovivo/organismovivocover.jpg"
+        alt="Barbie up the wall."
+      />
+    </article>
+    <article>
+      <WorkCover
+        title="wave"
+        label="Instalação com Gil Peixoto, Ácida, Porto"
+        src="/2019/wave/wavecover.jpg"
+        alt="A dark and abstract scenary."
+      />
+    </article>
+  </section>
+  <section class="2018">
+    <div class="year-label">
+      <p>2018</p>
+    </div>
+    <article>
+      <WorkCover
+        title="untitled"
+        label="Instalação, Fórum Maia, Porto"
+        src="/2018/untitle/untitlecover.jpg"
+        alt="Wooden robot in an angle."
+      />
+    </article>
+  </section>
 </BaseLayout>

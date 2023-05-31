@@ -1,0 +1,20 @@
+---
+interface Props {
+  title: string;
+  label: string;
+  src: string;
+  alt?: string | undefined;
+}
+const { title, label, src, alt } = Astro.props;
+---
+
+<div class="article-wrapper">
+  <div class="title-wrapper">
+    <p class="title-text"><span>{label}</span>{title}</p>
+  </div>
+  <div class="image-wrapper">
+    <a href="#">
+      <img src={src} alt={alt} loading="lazy" class="image-cover" />
+    </a>
+  </div>
+</div>
