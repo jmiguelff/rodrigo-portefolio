@@ -5,7 +5,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout>
   <div class="video-wrapper">
-    <div class="video"></div>
+    <div class="video-background">
+      <video autoplay loop muted playsinline>
+        <source src="/motorshell.mp4" type="video/mp4" />
+      </video>
+    </div>
     <div class="video-label">
       <p><span>motorshell</span> Espaço Ócio, 2022</p>
     </div>
@@ -65,9 +69,35 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     height: 100vh;
   }
 
+  .video-background {
+    overflow: hidden;
+  }
+
+  .video-background > video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -100;
+    background-position: 50%;
+    background-size: cover;
+    margin: auto;
+    position: absolute;
+    top: -100%;
+    bottom: -100%;
+    left: -100%;
+    right: -100%;
+    display: block;
+  }
+
+  .video-label {
+    position: absolute;
+    bottom: -3rem;
+  }
+
   .contacts-wrapper {
     position: relative;
     width: 100%;
+    height: 100vh;
   }
 
   .contacts-wrapper > img {
@@ -75,6 +105,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+    height: 100%;
+    object-fit: scale-down;
   }
 
   .social-links {
