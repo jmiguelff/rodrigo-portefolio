@@ -3,18 +3,55 @@ interface Props {
   title: string;
   label: string;
   src: string;
+  href?: string | undefined;
   alt?: string | undefined;
 }
-const { title, label, src, alt } = Astro.props;
+const { title, label, href, src, alt } = Astro.props;
 ---
 
 <div class="article-wrapper">
   <div class="title-wrapper">
-    <p class="title-text"><span>{label}</span>{title}</p>
+    <p class="title-text"><span>{title}</span>{label}</p>
   </div>
   <div class="image-wrapper">
-    <a href="#">
+    <a href={href}>
       <img src={src} alt={alt} loading="lazy" class="image-cover" />
     </a>
   </div>
 </div>
+
+<style>
+  .title-wrapper {
+    padding-left: 1rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+
+  .title-text {
+    color: var(--black-50);
+    font-family: "CenturyBook";
+    font-weight: 500;
+    font-size: 0.875rem;
+    line-height: 100%;
+    margin: 0;
+  }
+
+  .title-text span {
+    color: var(--black-50);
+    font-family: var(--font-brand);
+    font-weight: 600;
+    font-size: 0.875rem;
+    line-height: 100%;
+    margin-right: 0.5rem;
+  }
+
+  .image-wrapper a {
+    text-decoration: none;
+    display: block;
+  }
+
+  .image-cover {
+    display: block;
+    width: 100%;
+  }
+</style>

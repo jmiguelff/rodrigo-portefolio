@@ -1,0 +1,37 @@
+---
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Work page component
+import WorkComponent from "../components/WorkPage.astro";
+
+const materials = ["licra branca;", "ripa pinho;", "8 motores DC;", "arduino."];
+
+const image1 = {
+  src: "/2020/duo/duoimage1.jpg",
+  alt: "Detail of the textile on top of the robot.",
+};
+
+const image2 = {
+  src: "/2020/duo/duoimage2.jpg",
+  alt: "Geral shot of the robots on the floor.",
+};
+
+const image3 = {
+  src: "/2020/duo/duoimage3.jpg",
+  alt: "Close up of the robots.",
+};
+---
+
+<BaseLayout>
+  <WorkComponent
+    name="duo"
+    year="2020"
+    materials={materials}
+    description='"Encontrar um CLICK num palheiro” participação em exposição colectiva no Centro Comercial de Cedofeita, Porto. A peça dispõe de um diálogo entre dois organismos mecânicos, que exercem formas e comportamentos aleatórios num dado lugar de ocupação.'
+    imageLink1={image1}
+    imageLink2={image2}
+    imageLink3={image3}
+    videoLink="teste"
+  />
+</BaseLayout>

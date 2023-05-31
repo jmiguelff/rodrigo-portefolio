@@ -1,0 +1,180 @@
+---
+interface ImageProp {
+  src: string;
+  alt: string;
+}
+
+interface Props {
+  name: string;
+  year: string;
+  materials: Array<string>;
+  description: string;
+  imageLink1: ImageProp;
+  imageLink2: ImageProp;
+  imageLink3: ImageProp;
+  videoLink?: string | undefined;
+}
+const {
+  name,
+  year,
+  materials,
+  description,
+  imageLink1,
+  imageLink2,
+  imageLink3,
+  videoLink,
+} = Astro.props;
+---
+
+<div class="page-wrapper">
+  <div class="page-grid">
+    <div class="detail-wrapper">
+      <div class="title">
+        <h3>{name}</h3>
+        <p>{year}</p>
+      </div>
+      <div class="materials">
+        <ul>
+          {materials.map((material) => <li>{material}</li>)}
+        </ul>
+      </div>
+      <div class="description">
+        <p>
+          {description}
+        </p>
+      </div>
+    </div>
+    <div class="image-right">
+      <img
+        src={imageLink1.src}
+        loading="lazy"
+        alt={imageLink1.alt}
+        class="right-image"
+      />
+    </div>
+    <div class="image-top-left">
+      <img
+        src={imageLink2.src}
+        loading="lazy"
+        alt={imageLink2.alt}
+        class="left-image"
+      />
+    </div>
+    <div class="image-bot-left">
+      <img
+        src={imageLink3.src}
+        loading="lazy"
+        alt={imageLink3.alt}
+        class="left-image"
+      />
+    </div>
+    <div class="video">
+      <p>{videoLink}</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  .page-wrapper {
+    padding: 1rem;
+  }
+
+  .page-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .detail-wrapper {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+  }
+
+  .title {
+    grid-column: 1 / 1;
+    grid-row: 1 / 1;
+    display: flex;
+  }
+
+  .title h3 {
+    padding: 0;
+    margin: 0;
+    color: var(--black-50);
+    font-family: var(--font-brand);
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  .title p {
+    padding: 0;
+    margin: 0;
+    color: var(--black-50);
+    font-family: "CenturyBook";
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+
+  .materials {
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+  }
+
+  .materials ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .materials li {
+    list-style: none;
+    color: var(--black-50);
+    font-family: "CenturyBook";
+    font-weight: 500;
+    font-size: 0.875rem;
+  }
+
+  .description {
+    grid-column: 2 / 2;
+    grid-row: 1 / span 3;
+  }
+
+  .description p {
+    padding: 0;
+    margin: 0;
+    color: var(--black-50);
+    font-family: var(--font-brand);
+    font-weight: 600;
+    font-size: 1.25rem;
+  }
+
+  .image-right {
+    grid-column: 2 / 2;
+    grid-row: 1 / span 3;
+  }
+
+  .image-top-left {
+    grid-column: 1 / 1;
+    grid-row: 2 / 2;
+  }
+
+  .image-bot-left {
+    grid-column: 1 / 1;
+    grid-row: 3 / 3;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .video {
+    background-color: lightgrey;
+    grid-column: 1 / span 2;
+    grid-row: 4 / span 2;
+    padding: 1rem;
+  }
+</style>
