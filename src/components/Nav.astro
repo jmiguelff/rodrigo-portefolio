@@ -79,16 +79,17 @@ const textLinks = [
   .navbar-links li a {
     text-decoration: none;
     color: var(--black-50);
+    filter: blur(2px);
     display: block;
   }
 
-  .navbar-links li:hover {
-    font-size: 3.125rem;
-    /*background-color: tomato;*/
+  .navbar-links a:hover {
+    transform: scale(1.5, 1.5);
+    filter: blur(0);
   }
 
-  .link:not(.active) {
-    filter: blur(2px);
+  .link.active {
+    filter: blur(0);
   }
 
   .toggle-button {
