@@ -1,0 +1,43 @@
+---
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Work page component
+import WorkComponent from "../components/WorkPage.astro";
+
+const materials = [
+  "tecido;",
+  "espelho;",
+  "motores DC 12V;",
+  "ripa de pinho;",
+  "objetos encontrados.",
+];
+
+const image1 = {
+  src: "/2019/organismovivo/organismovivoimage1.jpg",
+  alt: "Wall structure.",
+};
+
+const image2 = {
+  src: "/2019/organismovivo/organismovivoimage2.jpg",
+  alt: "Detail of the wall structure.",
+};
+
+const image3 = {
+  src: "/2019/organismovivo/organismovivoimage3.jpg",
+  alt: "Robot on moving on the wall.",
+};
+---
+
+<BaseLayout>
+  <WorkComponent
+    name="organismo vivo"
+    year="2019"
+    materials={materials}
+    description="Empoderamento . Objeto não figura . Local de passagem . installation in TETRIS III, Pérola Negra, Porto."
+    imageLink1={image1}
+    imageLink2={image2}
+    imageLink3={image3}
+    videoLink="teste"
+  />
+</BaseLayout>

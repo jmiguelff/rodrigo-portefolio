@@ -1,0 +1,43 @@
+---
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Work page component
+import WorkComponent from "../components/WorkPage.astro";
+
+const materials = [
+  "pesos;",
+  "rede de obra;",
+  "cabo de aço;",
+  "projeção de vídeo;",
+  "motor AC.",
+];
+
+const image1 = {
+  src: "/2019/wave/waveimage1.jpg",
+  alt: "Detail of the wave piece.",
+};
+
+const image2 = {
+  src: "/2019/wave/waveimage2.jpg",
+  alt: "Geral shot of piece, blue lighting.",
+};
+
+const image3 = {
+  src: "/2019/wave/waveimage3.jpg",
+  alt: "Geral shot of piece, red lighting.",
+};
+---
+
+<BaseLayout>
+  <WorkComponent
+    name="wave"
+    year="2019"
+    materials={materials}
+    description="Wave, instalação, contexto rave, colaboração com Gil Peixoto, Ácida, Porto."
+    imageLink1={image1}
+    imageLink2={image2}
+    imageLink3={image3}
+    videoLink="teste"
+  />
+</BaseLayout>

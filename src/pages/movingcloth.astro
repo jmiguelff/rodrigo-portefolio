@@ -1,0 +1,37 @@
+---
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Work page component
+import WorkComponent from "../components/WorkPage.astro";
+
+const materials = ["tecido;", "ripa de pinho;", "motores DC."];
+
+const image1 = {
+  src: "/2020/movingcloth/movingclothimage1.jpg",
+  alt: "Outside shot of the piece.",
+};
+
+const image2 = {
+  src: "/2020/movingcloth/movingclothimage2.jpg",
+  alt: "Close up shot.",
+};
+
+const image3 = {
+  src: "/2020/movingcloth/movingclothimage3.jpg",
+  alt: "Close up shot from behind.",
+};
+---
+
+<BaseLayout>
+  <WorkComponent
+    name="moving cloth"
+    year="2020"
+    materials={materials}
+    description="Moving cloth parte da intenção da busca de comportamentos gerados aleatoriamente pela máquina. Um diálogo entre a matéria orgânica (têxtil) e a matéria mecânica (oculta pelo têxtil). O movimento, gerado pela ação mecânica, não segue uma lógica e introduz na peça um carácter performativo."
+    imageLink1={image1}
+    imageLink2={image2}
+    imageLink3={image3}
+    videoLink="teste"
+  />
+</BaseLayout>

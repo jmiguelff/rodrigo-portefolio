@@ -1,0 +1,46 @@
+---
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Work page component
+import WorkComponent from "../components/WorkPage.astro";
+
+const materials = [
+  "papel;",
+  "ripa de pinho;",
+  "serapilheira;",
+  "pigmento preto;",
+  "licra preta;",
+  "3 sensores;",
+  "motores DC;",
+  "arduino.",
+];
+
+const image1 = {
+  src: "/2019/mechanicdrawing/mechanicdrawingimage1.jpg",
+  alt: "Two drawing robots, frontal shot.",
+};
+
+const image2 = {
+  src: "/2019/mechanicdrawing/mechanicdrawingimage2.jpg",
+  alt: "Two drawing robots from top.",
+};
+
+const image3 = {
+  src: "/2019/mechanicdrawing/mechanicdrawingimage3.jpg",
+  alt: "Close up top view of the drawing robot.",
+};
+---
+
+<BaseLayout>
+  <WorkComponent
+    name="mechanic drawing"
+    year="2019"
+    materials={materials}
+    description="Desenho . Envolvência . Registo . Ação Mechanic drawing . installation in TETRIS II, Porto."
+    imageLink1={image1}
+    imageLink2={image2}
+    imageLink3={image3}
+    videoLink="teste"
+  />
+</BaseLayout>

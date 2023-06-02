@@ -90,13 +90,15 @@ const {
     grid-row: 1 / 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 1fr 1fr;
+    /*grid-template-rows: 0.5fr 1fr 1fr;*/
   }
 
   .title {
     grid-column: 1 / 1;
     grid-row: 1 / 1;
     display: flex;
+    gap: 0.25rem;
+    margin-bottom: 1.125rem;
   }
 
   .title h3 {
@@ -109,17 +111,18 @@ const {
   }
 
   .title p {
-    padding: 0;
+    padding-top: 0.3rem;
     margin: 0;
     color: var(--black-50);
     font-family: "CenturyBook";
     font-weight: 500;
-    font-size: 0.875rem;
+    font-size: 0.75rem;
   }
 
   .materials {
     grid-column: 1 / 1;
     grid-row: 2 / 2;
+    margin-bottom: 1.125rem;
   }
 
   .materials ul {

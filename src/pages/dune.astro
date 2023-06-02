@@ -1,0 +1,42 @@
+---
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Work page component
+import WorkComponent from "../components/WorkPage.astro";
+
+const materials = [
+  "projector vídeo;",
+  "licra branca;",
+  "ripa de pinho;",
+  "motores DC.",
+];
+
+const image1 = {
+  src: "/2020/dune/duneimage1.jpg",
+  alt: "Close up of the piece.",
+};
+
+const image2 = {
+  src: "/2020/dune/duneimage2.jpg",
+  alt: "Geral shot of the piece.",
+};
+
+const image3 = {
+  src: "/2020/dune/duneimage3.jpg",
+  alt: "Shot under the textile.",
+};
+---
+
+<BaseLayout>
+  <WorkComponent
+    name="dunne"
+    year="2020"
+    materials={materials}
+    description="Subversão . Ecrã móvel . Projecção estática."
+    imageLink1={image1}
+    imageLink2={image2}
+    imageLink3={image3}
+    videoLink="teste"
+  />
+</BaseLayout>

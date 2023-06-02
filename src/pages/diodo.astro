@@ -1,0 +1,37 @@
+---
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Work page component
+import WorkComponent from "../components/WorkPage.astro";
+
+const materials = ["díodo laser", "altifalantes;", "espelho;", "latex."];
+
+const image1 = {
+  src: "/2020/diodo/diodoimage1.jpg",
+  alt: "Close up of the laser.",
+};
+
+const image2 = {
+  src: "/2020/diodo/diodoimage2.jpg",
+  alt: "Shot of the laser.",
+};
+
+const image3 = {
+  src: "/2020/diodo/diodoimage3.jpg",
+  alt: "Ambient shot of the piece.",
+};
+---
+
+<BaseLayout>
+  <WorkComponent
+    name="díodo"
+    year="2020"
+    materials={materials}
+    description="Projecção laser áudio-reactiva em contexto rave."
+    imageLink1={image1}
+    imageLink2={image2}
+    imageLink3={image3}
+    videoLink="teste"
+  />
+</BaseLayout>
