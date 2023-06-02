@@ -1,0 +1,50 @@
+---
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Work page component
+import WorkComponent from "../components/WorkNoVideo.astro";
+
+const materials = [
+  "licra;",
+  "pinho;",
+  "arduino;",
+  "14 relés",
+  "lâmpadas tubulares",
+  "7 atuadores lineares adaptados;",
+  "componentes electrónicos.",
+];
+
+const image1 = {
+  src: "/2020/presencamutavel/presencamutavelimage1.jpg",
+  alt: "Detail of 1 tubular light in the ceiling.",
+};
+
+const image2 = {
+  src: "/2020/presencamutavel/presencamutavelimage2.jpg",
+  alt: "Tubular light and wood mechanic structure.",
+};
+
+const image3 = {
+  src: "/2020/presencamutavel/presencamutavelimage3.jpg",
+  alt: "Two tubular lights and structures interacting with textil.",
+};
+
+const image4 = {
+  src: "/2020/presencamutavel/presencamutavelimage4.jpg",
+  alt: "Open shot of the room with the piece on the ceiling.",
+};
+---
+
+<BaseLayout>
+  <WorkComponent
+    name="presença luminosa mutável"
+    year="2020"
+    materials={materials}
+    description="Uma peça de luz que se instala no espaço de uma forma modular. Entre a íntima relação do ser humano, a luz e os seus dispositivos, pensa-se na intenção de uma peça, como instrumento arquitetónico oscilante que viabilize a conexão com o seu operador. Através das suas gesticulações e diferentes configurações, o objeto vivo exerce uma modelação espacial do local onde se instala. Site-specific installation in Limina, Porto"
+    imageLink1={image1}
+    imageLink2={image2}
+    imageLink3={image3}
+    imageLink4={image4}
+  />
+</BaseLayout>
