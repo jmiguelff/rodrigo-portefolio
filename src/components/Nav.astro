@@ -28,6 +28,9 @@ const textLinks = [
                     Astro.url.pathname === href ||
                     (href !== "/" && Astro.url.pathname.startsWith(href)),
                 },
+                {
+                  home: Astro.url.pathname === "/",
+                },
               ]}
               href={href}
             >
@@ -89,6 +92,10 @@ const textLinks = [
   }
 
   .link.active {
+    filter: blur(0);
+  }
+
+  .link.home {
     filter: blur(0);
   }
 
