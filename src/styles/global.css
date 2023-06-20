@@ -1,18 +1,29 @@
 /* Register your custom font family and tell the browser where to find it. */
 @font-face {
-  font-family: "TWKLausanne";
-  src: url("/fonts/TWKLausanne-600.otf") format("otf");
-  font-weight: 600;
+  font-family: 'itc_centurybook';
+  src: url('/fonts/century-book-webfont.woff2') format('woff2'),
+       url('/fonts/century-book-webfont.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
-  font-display: swap;
+
 }
 
 @font-face {
-  font-family: "CenturyBook";
-  src: url("/fonts/Century-Book.otf") format("otf");
-  font-weight: 500;
+  font-family: 'twk_lausanne600';
+  src: url('/fonts/twklausanne-600-webfont.woff2') format('woff2'),
+       url('/fonts/twklausanne-600-webfont.woff') format('woff');
+  font-weight: normal;
   font-style: normal;
-  font-display: swap;
+
+}
+
+@font-face {
+  font-family: 'itc_centurybook_italic';
+  src: url('/fonts/centuryitcbybt-bookitalic-webfont.woff2') format('woff2'),
+       url('/fonts/centuryitcbybt-bookitalic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
 }
 
 :root {
@@ -25,12 +36,13 @@
   --black-400: #4d4d4d;
 
   /* Text Sizes */
+  --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
   --text-md: 1.125rem;
   --text-lg: 1.25rem;
   --text-xl: 1.625rem;
-  --text-2xl: 2.125rem;
+  --text-2xl: 2rem;
   --text-3xl: 2.625rem;
   --text-4xl: 3.5rem;
   --text-5xl: 4.5rem;
@@ -38,8 +50,9 @@
   /* Fonts */
   --font-system: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --font-body: "CenturyBook", var(--font-system);
-  --font-brand: "TWKLausanne", var(--font-system);
+  --font-body: 'itc_centurybook';
+  --font-brand: 'twk_lausanne600';
+  --font-italic: 'itc_centurybook_italic';
 }
 
 * {

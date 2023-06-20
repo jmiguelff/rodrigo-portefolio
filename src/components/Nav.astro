@@ -8,6 +8,15 @@ const textLinks = [
 <nav class="navbar">
   <div class="site-title-wrap">
     <a href="/" class="site-title">rodrigo aroso</a>
+    <a href="/" class="site-title-sm">
+      <img
+        src="/ra.png"
+        alt="rodrigo aroso"
+        loading="lazy"
+        width="24"
+        height="24"
+      />
+    </a>
   </div>
   <a href="#" class="toggle-button">
     <span class="bar"></span>
@@ -57,7 +66,6 @@ const textLinks = [
     background-color: white;
     color: var(--black-50);
     font-family: var(--font-brand);
-    font-weight: 600;
     font-size: 2rem;
     /* top | right | bottom | left */
     padding: 0 1rem 0.125rem 1rem;
@@ -67,6 +75,22 @@ const textLinks = [
     text-decoration: none;
     color: var(--black-50);
     display: block;
+  }
+
+  .site-title:hover {
+    filter: blur(2px);
+  }
+
+  .site-title-sm {
+    display: none;
+  }
+
+  .site-title-sm > img {
+    display: block;
+  }
+
+  .site-title-sm:hover {
+    filter: blur(2px);
   }
 
   .navbar-links ul {
@@ -82,22 +106,22 @@ const textLinks = [
   .navbar-links li a {
     text-decoration: none;
     color: var(--black-50);
-    filter: blur(2px);
+    filter: blur(0);
     display: block;
   }
 
   .navbar-links a:hover {
-    transform: scale(1.5, 1.5);
-    filter: blur(0);
+    filter: blur(2px);
   }
 
+  /*
   .link.active {
     filter: blur(0);
   }
 
   .link.home {
     filter: blur(0);
-  }
+  }*/
 
   .toggle-button {
     position: absolute;
@@ -118,10 +142,19 @@ const textLinks = [
   }
 
   @media (max-width: 500px) {
-    .toggle-button {
-      display: flex;
+    .site-title {
+      display: none;
     }
 
+    .site-title-sm {
+      display: block;
+    }
+
+    .toggle-button {
+      display: none;
+    }
+
+    /*
     .navbar-links {
       display: none;
       width: 100%;
@@ -148,15 +181,16 @@ const textLinks = [
 
     .navbar-links.active {
       display: flex;
-    }
+    }*/
   }
 </style>
 
 <script>
+  /*
   const toggleButton = document.getElementsByClassName("toggle-button")[0];
   const navbarLinks = document.getElementsByClassName("navbar-links")[0];
 
   toggleButton.addEventListener("click", () => {
     navbarLinks.classList.toggle("active");
-  });
+  });*/
 </script>

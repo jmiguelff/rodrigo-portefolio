@@ -44,7 +44,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
 
         <div class="row">
-          <h3>Formação Académica</h3>
+          <h3>Academic Education</h3>
           <div class="detail-wrapper">
             <p class="detail-text">2014 - 2019</p>
             <p class="detail-text">
@@ -103,33 +103,31 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       margin: 0;
       color: var(--black-50);
       font-family: var(--font-brand);
-      font-weight: 600;
-      font-size: 1.25rem;
-      line-height: 105%;
+      font-size: var(--text-lg);
+      line-height: 20px;
     }
 
     .row {
       display: flex;
       padding-left: 1rem;
-      margin: 1em 0 1em 0;
+      margin: 1em 0 2em 0;
+      align-items: start;
     }
 
     .row > h3 {
       min-width: 25ch;
       color: var(--black-50);
       font-family: var(--font-brand);
-      font-weight: 600;
-      font-size: 0.875rem;
+      font-size: var(--text-sm);
       margin: 0;
     }
 
     .detail-text {
       color: var(--black-50);
-      font-family: "CenturyBook";
-      font-weight: 500;
-      font-size: 0.875rem;
-      margin-top: 0;
-      margin-bottom: 0.875em;
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      margin: 0;
+      padding-top: 0.15em;
     }
 
     .about-image {

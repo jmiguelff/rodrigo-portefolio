@@ -9,6 +9,7 @@ interface Props {
   year: string;
   materials: Array<string>;
   description: string;
+  location?: string | undefined;
   imageLink1: ImageProp;
   imageLink2: ImageProp;
   imageLink3: ImageProp;
@@ -19,6 +20,7 @@ const {
   year,
   materials,
   description,
+  location,
   imageLink1,
   imageLink2,
   imageLink3,
@@ -41,6 +43,9 @@ const {
       <div class="description">
         <p>
           {description}
+        </p>
+        <p>
+          {location}
         </p>
       </div>
     </div>
@@ -91,9 +96,14 @@ const {
   .detail-wrapper {
     grid-column: 1 / 1;
     grid-row: 1 / 1;
+    justify-items: start;
+    grid-auto-columns: min-content;
+
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    /*grid-template-rows: 0.5fr 1fr 1fr;*/
+    grid-template-rows: 1.1rem auto;
+    gap: 1rem;
+
+    margin-bottom: 8rem;
   }
 
   .title {
@@ -101,7 +111,6 @@ const {
     grid-row: 1 / 1;
     display: flex;
     gap: 0.25rem;
-    margin-bottom: 1.125rem;
   }
 
   .title h3 {
@@ -109,23 +118,23 @@ const {
     margin: 0;
     color: var(--black-50);
     font-family: var(--font-brand);
-    font-weight: 600;
-    font-size: 1.25rem;
+    font-size: var(--text-lg);
+    white-space: nowrap;
   }
 
   .title p {
     padding-top: 0.3rem;
     margin: 0;
     color: var(--black-50);
-    font-family: "CenturyBook";
-    font-weight: 500;
-    font-size: 0.75rem;
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
   }
 
   .materials {
     grid-column: 1 / 1;
     grid-row: 2 / 2;
     margin-bottom: 1.125rem;
+    min-width: 100px;
   }
 
   .materials ul {
@@ -136,14 +145,21 @@ const {
   .materials li {
     list-style: none;
     color: var(--black-50);
-    font-family: "CenturyBook";
-    font-weight: 500;
-    font-size: 0.875rem;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    white-space: nowrap;
   }
 
   .description {
     grid-column: 2 / 2;
     grid-row: 1 / span 3;
+    justify-self: start;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+
+    width: 350px;
   }
 
   .description p {
@@ -151,8 +167,7 @@ const {
     margin: 0;
     color: var(--black-50);
     font-family: var(--font-brand);
-    font-weight: 600;
-    font-size: 1.25rem;
+    font-size: var(--text-lg);
   }
 
   .image-right {

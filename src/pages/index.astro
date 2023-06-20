@@ -51,17 +51,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   p {
     color: var(--black-50);
-    font-family: "CenturyBook";
-    font-weight: 500;
-    font-size: 0.875rem;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
     line-height: 22px;
   }
 
   p span {
     color: var(--black-50);
     font-family: var(--font-brand);
-    font-weight: 600;
-    font-size: 0.875rem;
+    font-size: var(--text-sm);
     line-height: 22px;
   }
 
@@ -128,13 +126,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   }
 
   .social-links li a {
+    display: block;
     text-decoration: none;
     color: var(--black-50);
-    display: block;
     font-family: var(--font-brand);
-    font-weight: 600;
-    font-size: 2rem;
+    font-size: var(--text-2xl);
     line-height: 2rem;
+  }
+
+  .social-links li a:hover {
+    filter: blur(2px);
   }
 
   .footer {
@@ -155,5 +156,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   .copyrights > p {
     margin: 0;
     line-height: normal;
+    text-align: end;
   }
 </style>

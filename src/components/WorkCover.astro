@@ -1,19 +1,24 @@
 ---
 interface Props {
-  title: string;
   color: string;
-  label: string;
+  title: string;
+  label?: string | undefined;
+  name?: string | undefined;
+  local?: string | undefined;
   src: string;
   href?: string | undefined;
   alt?: string | undefined;
 }
-const { title, color, label, href, src, alt } = Astro.props;
+const { title, color, label, name, href, src, alt, local } = Astro.props;
 ---
 
 <div class="article-wrapper">
   <div class="image-wrapper">
     <div class="title-wrapper">
-      <p class="title-text"><span>{title}</span>{label}</p>
+      <p class="title-text">
+        <span>{title}</span>{label}
+        <span class="italic">{name}</span>{local}
+      </p>
     </div>
     <a href={href}>
       <img src={src} alt={alt} loading="lazy" class="image-cover" />
@@ -37,20 +42,23 @@ const { title, color, label, href, src, alt } = Astro.props;
 
   .title-text {
     color: var(--color);
-    font-family: "CenturyBook";
-    font-weight: 500;
-    font-size: 0.875rem;
-    line-height: 100%;
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
     margin: 0;
   }
 
-  .title-text span {
+  span {
     color: var(--color);
     font-family: var(--font-brand);
-    font-weight: 600;
-    font-size: 0.875rem;
-    line-height: 100%;
+    font-size: var(--text-sm);
     margin-right: 0.5rem;
+  }
+
+  .italic {
+    color: var(--color);
+    font-family: var(--font-italic);
+    font-size: var(--text-sm);
+    margin: 0;
   }
 
   .image-wrapper a {
