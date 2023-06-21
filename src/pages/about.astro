@@ -82,10 +82,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <style>
     .wrapper {
       display: flex;
-    }
-
-    .wrapper > * {
-      flex-basis: 100%;
+      justify-content: space-between;
+      align-items: flex-start;
     }
 
     .description {
@@ -130,10 +128,15 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       padding-top: 0.15em;
     }
 
+    .right {
+      max-width: 50%;
+    }
+
     .about-image {
       display: block;
-      float: right;
       height: 100%;
+      width: 100%;
+      object-fit: contain;
     }
   </style>
 </BaseLayout>

@@ -1,0 +1,43 @@
+---
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Work page component
+import WorkComponent from "../components/WorkPage.astro";
+
+const materials = [
+  "cloth;",
+  "window frames;",
+  "upcycled motors;",
+  "red LED strip.",
+];
+
+const image1 = {
+  src: "/2022/motorshell/motorshell1.jpg",
+  alt: "Entire piece in the space.",
+};
+
+const image2 = {
+  src: "/2022/motorshell/motorshell2.jpg",
+  alt: "Detail shot.",
+};
+
+const image3 = {
+  src: "/2022/motorshell/motorshell3.jpg",
+  alt: "Detail shot II.",
+};
+---
+
+<BaseLayout>
+  <WorkComponent
+    name="motorshell"
+    year="2022"
+    materials={materials}
+    description="Installation."
+    location="Espaço Ócio, Porto."
+    imageLink1={image1}
+    imageLink2={image2}
+    imageLink3={image3}
+    videoLink="https://player.vimeo.com/video/831281659?h=1163deea42&title=0&byline=0&portrait=0"
+  />
+</BaseLayout>

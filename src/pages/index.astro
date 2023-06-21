@@ -6,12 +6,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <BaseLayout>
   <div class="video-wrapper">
     <div class="video-background">
-      <video autoplay loop muted playsinline>
-        <source src="/motorshell.mp4" type="video/mp4" />
-      </video>
-    </div>
-    <div class="video-label">
-      <p><span>motorshell</span> Espaço Ócio, 2022</p>
+      <a href="/motorshell/">
+        <video autoplay loop muted playsinline>
+          <source src="/motorshell.mp4" type="video/mp4" />
+        </video>
+      </a>
     </div>
   </div>
 
@@ -69,6 +68,12 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   .video-background {
     overflow: hidden;
+    height: 100vh;
+  }
+
+  .video-background > a {
+    display: block;
+    text-decoration: none;
   }
 
   .video-background > video {
