@@ -7,62 +7,36 @@ import WorkCover from "../components/WorkCover.astro";
 ---
 
 <BaseLayout>
+  <section class="2022">
+    <div class="year-label">
+      <p>2022</p>
+    </div>
+    <article>
+      <WorkCover
+        title="motorshell"
+        color="#FFFFFF"
+        href="/motorshell/"
+        label="Installation, "
+        name="Viagem ao Anti-Centro"
+        local=", Espaço Ócio, Porto"
+        src="/2022/motorshell/motorshellcover.jpg"
+        alt="Overview of the exhibition at Ócio."
+      />
+    </article>
+  </section>
   <section class="2020">
     <div class="year-label">
       <p>2020</p>
     </div>
     <article>
       <WorkCover
-        title="duo"
-        color="var(--black-50)"
-        label="Collective exhibition, installation"
-        name='"Encontrar Um CLICK Num Palheiro"'
-        local=", Centro Comercial de Cedofeita, Porto"
-        href="/duo/"
-        src="/2020/duo/duocover.jpg"
-        alt="Duo exhibition machines."
-      />
-    </article>
-    <article>
-      <WorkCover
-        title="dunne"
+        title="moving cloth"
         color="#FFFFFF"
-        label="Installation"
-        name='"With Grandpa&apos;s Lab"'
-        local=" Fisga, Porto"
-        href="/dune/"
-        src="/2020/dune/dunecover.jpg"
-        alt="Matrix of light on textile."
-      />
-    </article>
-    <article>
-      <WorkCover
-        title="díodo"
-        color="#FFFFFF"
-        label="Installation,"
-        local="Ácida, Porto"
-        href="/diodo/"
-        src="/2020/diodo/diodocover.jpg"
-        alt="Dark image of diodo installation."
-      />
-    </article>
-    <article>
-      <WorkCover
-        title="presença mutável"
-        color="var(--black-50)"
-        label="Installation,"
-        local="Galeria Dentro, Porto"
-        src="/2020/presencamutavel/presencamutavelcover.jpg"
-        alt="Shape getting out of a wall."
-      />
-    </article>
-    <article>
-      <WorkCover
-        title="video installation"
-        color="var(--black-50)"
-        label="Galeria Dentro, Porto"
-        src="/2020/videoinstalacao/videoinstalacaocover.jpg"
-        alt="Wire in the middle of the room."
+        href="/movingcloth/"
+        label="Installation, "
+        local="Limina, Porto"
+        src="/2020/movingcloth/movingclothcover.jpg"
+        alt="Shape with cloth on top."
       />
     </article>
     <article>
@@ -78,13 +52,44 @@ import WorkCover from "../components/WorkCover.astro";
     </article>
     <article>
       <WorkCover
-        title="moving cloth"
+        title="video installation"
+        color="var(--black-50)"
+        label="Galeria Dentro, Porto"
+        src="/2020/videoinstalacao/videoinstalacaocover.jpg"
+        alt="Wire in the middle of the room."
+      />
+    </article>
+    <article>
+      <WorkCover
+        title="presença mutável"
+        color="var(--black-50)"
+        label="Installation,"
+        local="Galeria Dentro, Porto"
+        src="/2020/presencamutavel/presencamutavelcover.jpg"
+        alt="Shape getting out of a wall."
+      />
+    </article>
+    <article>
+      <WorkCover
+        title="díodo"
         color="#FFFFFF"
-        href="/movingcloth/"
-        label="Installation, "
-        local="Limina, Porto"
-        src="/2020/movingcloth/movingclothcover.jpg"
-        alt="Shape with cloth on top."
+        label="Installation,"
+        local="Ácida, Porto"
+        href="/diodo/"
+        src="/2020/diodo/diodocover.jpg"
+        alt="Dark image of diodo installation."
+      />
+    </article>
+    <article>
+      <WorkCover
+        title="duo"
+        color="var(--black-50)"
+        label="Collective exhibition, installation"
+        name='"Encontrar Um CLICK Num Palheiro"'
+        local=", Centro Comercial de Cedofeita, Porto"
+        href="/duo/"
+        src="/2020/duo/duocover.jpg"
+        alt="Duo exhibition machines."
       />
     </article>
   </section>
@@ -94,13 +99,25 @@ import WorkCover from "../components/WorkCover.astro";
     </div>
     <article>
       <WorkCover
-        title="mechanic drawing"
-        color="var(--black-50)"
-        href="/mechanicdrawing/"
-        label="Installation, "
-        local="TETRIS II, Porto"
-        src="/2019/mechanicdrawing/mechanicdrawingcover.jpg"
-        alt="Drawing robot."
+        title="dunne"
+        color="#FFFFFF"
+        label="Installation"
+        name='"With Grandpa&apos;s Lab"'
+        local=" Fisga, Porto"
+        href="/dune/"
+        src="/2020/dune/dunecover.jpg"
+        alt="Matrix of light on textile."
+      />
+    </article>
+    <article>
+      <WorkCover
+        title="wave"
+        color="#FFFFFF"
+        href="/wave/"
+        label="Collaborative installation with Gil Peixoto"
+        local="Ácida, Porto"
+        src="/2019/wave/wavecover.jpg"
+        alt="A dark and abstract scenary."
       />
     </article>
     <article>
@@ -116,13 +133,13 @@ import WorkCover from "../components/WorkCover.astro";
     </article>
     <article>
       <WorkCover
-        title="wave"
-        color="#FFFFFF"
-        href="/wave/"
-        label="Collaborative installation with Gil Peixoto"
-        local="Ácida, Porto"
-        src="/2019/wave/wavecover.jpg"
-        alt="A dark and abstract scenary."
+        title="mechanic drawing"
+        color="var(--black-50)"
+        href="/mechanicdrawing/"
+        label="Installation, "
+        local="TETRIS II, Porto"
+        src="/2019/mechanicdrawing/mechanicdrawingcover.jpg"
+        alt="Drawing robot."
       />
     </article>
   </section>
@@ -132,11 +149,11 @@ import WorkCover from "../components/WorkCover.astro";
     </div>
     <article>
       <WorkCover
-        title="untitled"
+        title="sound machine"
         color="var(--black-50)"
         label="Installation, "
-        local="Fórum Maia, Porto"
-        src="/2018/untitle/untitlecover.jpg"
+        local="void"
+        src="/2018/soundmachine/soundmachinecover.jpg"
         alt="Wooden robot in an angle."
       />
     </article>
@@ -145,9 +162,10 @@ import WorkCover from "../components/WorkCover.astro";
 
 <style>
   .year-label {
-    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top: 0.5rem;
     margin-bottom: 0.75rem;
+    text-align: right;
   }
 
   .year-label p {
