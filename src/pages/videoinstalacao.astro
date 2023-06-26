@@ -1,0 +1,65 @@
+---
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Work page component
+import WorkComponentTop from "../components/WorkTopPage.astro";
+import WorkComponentBot from "../components/WorkBotPage.astro";
+
+const materialsTop = [
+  "material 1;",
+  "material 2;",
+  "material 3;",
+  "material 4.",
+];
+
+const image1Top = {
+  src: "/2020/videoinstalacao/videoinstalacao1.jpg",
+  alt: "Side view of the piece in the space.",
+};
+
+const image2Top = {
+  src: "/2020/videoinstalacao/videoinstalacao2.jpg",
+  alt: "Overview of the piece.",
+};
+
+const materialsBot = [
+  "material 1;",
+  "material 2;",
+  "material 3;",
+  "material 4.",
+];
+
+const image1Bot = {
+  src: "/2020/presencamutavel/presencamutavel1.jpg",
+  alt: "Detail of the piece.",
+};
+
+const image2Bot = {
+  src: "/2020/presencamutavel/presencamutavel2.jpg",
+  alt: "Overview of the piece.",
+};
+---
+
+<BaseLayout>
+  <WorkComponentTop
+    name="video installation"
+    year="2020"
+    materials={materialsTop}
+    description="Video instalation, interventions over images from Dentro."
+    location="Galeria Dentro, Porto."
+    imageLink1={image1Top}
+    imageLink2={image2Top}
+    videoLink="https://player.vimeo.com/video/485596621?h=6eb82d152e&title=0&byline=0&portrait=0"
+  />
+  <WorkComponentBot
+    name="presença mutável"
+    year="2020"
+    materials={materialsBot}
+    description="This needs a description!"
+    location="Galeria Dentro, Porto."
+    imageLink1={image1Bot}
+    imageLink2={image2Bot}
+    videoLink="https://player.vimeo.com/video/485595685?h=15a99c0b2e&title=0&byline=0&portrait=0"
+  />
+</BaseLayout>
