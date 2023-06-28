@@ -6,12 +6,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import WorkComponentTop from "../components/WorkTopPage.astro";
 import WorkComponentBot from "../components/WorkBotPage.astro";
 
-const materialsTop = [
-  "material 1;",
-  "material 2;",
-  "material 3;",
-  "material 4.",
-];
+const materialsTop = ["metal rod."];
 
 const image1Top = {
   src: "/2020/videoinstalacao/videoinstalacao1.jpg",
@@ -23,12 +18,7 @@ const image2Top = {
   alt: "Overview of the piece.",
 };
 
-const materialsBot = [
-  "material 1;",
-  "material 2;",
-  "material 3;",
-  "material 4.",
-];
+const materialsBot = ["Cloth;", "DC motors;", "Beams."];
 
 const image1Bot = {
   src: "/2020/presencamutavel/presencamutavel1.jpg",
@@ -43,10 +33,10 @@ const image2Bot = {
 
 <BaseLayout>
   <WorkComponentTop
-    name="video installation"
+    name='"("'
     year="2020"
     materials={materialsTop}
-    description="Video instalation, interventions over images from Dentro."
+    description="Video instalation, interventions over images from gallery Dentro."
     location="Galeria Dentro, Porto."
     imageLink1={image1Top}
     imageLink2={image2Top}
@@ -56,7 +46,7 @@ const image2Bot = {
     name="presença mutável"
     year="2020"
     materials={materialsBot}
-    description="This needs a description!"
+    description="Video instalation, interventions over images from gallery Dentro."
     location="Galeria Dentro, Porto."
     imageLink1={image1Bot}
     imageLink2={image2Bot}

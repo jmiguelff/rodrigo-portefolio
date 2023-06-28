@@ -1,0 +1,45 @@
+---
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Work page component
+import WorkComponent from "../components/WorkPage.astro";
+
+const materials = [
+  "paper;",
+  "pine beam;",
+  "cloth;",
+  "plastic sheet;",
+  "black pigment;",
+  "DC motors;",
+  "arduino.",
+];
+
+const image1 = {
+  src: "/2018/soundmachine/soundmachine1.jpg",
+  alt: "Detail of the sound machine.",
+};
+
+const image2 = {
+  src: "/2018/soundmachine/soundmachine2.jpg",
+  alt: "Geral shot of piece.",
+};
+
+const image3 = {
+  src: "/2018/soundmachine/soundmachine3.jpg",
+  alt: "Profile shot of piece.",
+};
+---
+
+<BaseLayout>
+  <WorkComponent
+    name="sound machine"
+    year="2018"
+    materials={materials}
+    description="Studio tests."
+    imageLink1={image1}
+    imageLink2={image2}
+    imageLink3={image3}
+    videoLink="https://player.vimeo.com/video/342458808?h=84ca8b848d&title=0&byline=0&portrait=0"
+  />
+</BaseLayout>

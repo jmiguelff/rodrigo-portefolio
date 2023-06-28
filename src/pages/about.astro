@@ -8,32 +8,34 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <div class="wrapper">
       <div class="left">
         <div class="description">
-          <p>
-            is an artist from Porto whose work is immersed in the realm of fluid
-            and chaotic motion, evoking a sense of otherworldly environments
-            through the incorporation of motors and simple mechanics.
+          <p>I’m an artist based in Porto.</p>
+          <p class="indent">
+            I think that my work belongs in the realm of fluid and chaotic
+            motion that evokes a sense of otherworldly environments through the
+            incorporation of motors and simple mechanics.
           </p>
           <p class="indent">
             Combining sculpture, kinetics, found objects, energy, painting, and
-            industrial materials, Aroso creates mesmeric spaces where his
-            artworks come alive in an enigmatic dance of disorder and harmony.
+            industrial materials, I aim towards the creation of mesmeric
+            environments where artworks come alive in an enigmatic dance of
+            disorder and harmony.
           </p>
           <p class="indent">
             Each piece showcases an interplay of diverse shapes, materials,
-            textures and light into the semblance of living organisms,
-            exhibiting involuntary behaviors that blur the lines of logic and
-            perception, serving as a vehicle to a phantasmagoric wonder.
+            textures and light in a semblance of living organisms, they end up
+            as a vehicle to a phantasmagoric wonder, by exhibiting involuntary
+            behaviours that blur the lines of logic and perception.
           </p>
           <p class="indent">
-            The machines within the installations seem to have a hidden soul, as
+            The machines within the installations seem to have hidden souls, as
             if something is growing and evolving within them, waiting to be set
-            free where the audience is invited to witness this transformative
-            process in a deeper level.
+            free by the audience who is encouraged to witness this somewhat
+            metamorphic process in a deeper level.
           </p>
           <p class="indent">
-            It's an invitation to embrace the unknown and to explore the
-            complexities of the natural and supernatural world and to
-            contemplate the forces that govern it.
+            It's an invitation into the unknown, to go in and try to explore the
+            complexities of the natural and supernatural world, to contemplate
+            the forces that govern it.
           </p>
         </div>
         <div class="row">
@@ -50,11 +52,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
             <p class="detail-text">
               Faculdade de Belas Artes da Universidade do Porto
             </p>
-            <p class="detail-text">
-              Práticas de escultura, Atelier de Escultura,
-            </p>
-            <p class="detail-text">Práticas de Vídeo, Áudio,</p>
-            <p class="detail-text">História da Arte, Desenho</p>
           </div>
         </div>
 
@@ -67,7 +64,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </div>
         </div>
       </div>
-
       <div class="right">
         <img
           src="/RodrigoAroso.jpeg"
@@ -77,66 +73,66 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         />
       </div>
     </div>
+
+    <style>
+      .wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+
+      .description {
+        max-width: 55ch;
+        padding-left: 1rem;
+        margin-bottom: 10rem;
+      }
+
+      .description .indent {
+        text-indent: 38px;
+      }
+
+      .description > p {
+        padding: 0;
+        margin: 0;
+        color: var(--black-50);
+        font-family: var(--font-brand);
+        font-size: var(--text-lg);
+        line-height: 20px;
+      }
+
+      .row {
+        display: flex;
+        padding-left: 1rem;
+        margin: 1em 0 2em 0;
+        align-items: start;
+      }
+
+      .row > h3 {
+        min-width: 25ch;
+        color: var(--black-50);
+        font-family: var(--font-brand);
+        font-size: var(--text-sm);
+        margin: 0;
+      }
+
+      .detail-text {
+        color: var(--black-50);
+        font-family: var(--font-body);
+        font-size: var(--text-sm);
+        margin: 0;
+        padding-top: 0.15em;
+      }
+
+      .right {
+        max-width: 50%;
+      }
+
+      .about-image {
+        display: block;
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    </style>
   </section>
-
-  <style>
-    .wrapper {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-    }
-
-    .description {
-      max-width: 55ch;
-      padding-left: 1rem;
-      margin-bottom: 10rem;
-    }
-
-    .description .indent {
-      text-indent: 38px;
-    }
-
-    .description > p {
-      padding: 0;
-      margin: 0;
-      color: var(--black-50);
-      font-family: var(--font-brand);
-      font-size: var(--text-lg);
-      line-height: 20px;
-    }
-
-    .row {
-      display: flex;
-      padding-left: 1rem;
-      margin: 1em 0 2em 0;
-      align-items: start;
-    }
-
-    .row > h3 {
-      min-width: 25ch;
-      color: var(--black-50);
-      font-family: var(--font-brand);
-      font-size: var(--text-sm);
-      margin: 0;
-    }
-
-    .detail-text {
-      color: var(--black-50);
-      font-family: var(--font-body);
-      font-size: var(--text-sm);
-      margin: 0;
-      padding-top: 0.15em;
-    }
-
-    .right {
-      max-width: 50%;
-    }
-
-    .about-image {
-      display: block;
-      height: 100%;
-      width: 100%;
-      object-fit: contain;
-    }
-  </style>
 </BaseLayout>
