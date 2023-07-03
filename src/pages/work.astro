@@ -16,7 +16,7 @@ import WorkCover from "../components/WorkCover.astro";
         title="motorshell"
         color="#FFFFFF"
         href="/motorshell/"
-        label="Installation, "
+        label="installation, "
         name="Viagem ao Anti-Centro"
         local=", Espaço Ócio, Porto"
         src="/2022/motorshell/motorshellcover.jpg"
@@ -33,7 +33,7 @@ import WorkCover from "../components/WorkCover.astro";
         title="moving cloth"
         color="#FFFFFF"
         href="/movingcloth/"
-        label="Installation, "
+        label="installation, "
         local="Limina, Porto"
         src="/2020/movingcloth/movingclothcover.jpg"
         alt="Shape with cloth on top."
@@ -52,20 +52,20 @@ import WorkCover from "../components/WorkCover.astro";
     </article>
     <article>
       <WorkCover
-        title="video installation"
+        title='"(",'
         color="var(--black-50)"
         href="/videoinstalacao/"
-        label="Galeria Dentro, Porto"
+        label="video installation, Galeria Dentro, Porto"
         src="/2020/videoinstalacao/videoinstalacaocover.jpg"
         alt="Wire in the middle of the room."
       />
     </article>
     <article>
       <WorkCover
-        title="presença mutável"
+        title="mutable presence"
         color="var(--black-50)"
         href="/videoinstalacao/"
-        label="Installation,"
+        label="video installation,"
         local="Galeria Dentro, Porto"
         src="/2020/presencamutavel/presencamutavelcover.jpg"
         alt="Shape getting out of a wall."
@@ -75,7 +75,7 @@ import WorkCover from "../components/WorkCover.astro";
       <WorkCover
         title="díodo"
         color="#FFFFFF"
-        label="Installation,"
+        label="installation, "
         local="Ácida, Porto"
         href="/diodo/"
         src="/2020/diodo/diodocover.jpg"
@@ -86,8 +86,8 @@ import WorkCover from "../components/WorkCover.astro";
       <WorkCover
         title="duo"
         color="var(--black-50)"
-        label="Collective exhibition, installation"
-        name='"Encontrar Um CLICK Num Palheiro"'
+        label="collective exhibition, "
+        name='"Finding a CLICK in a haystack"'
         local=", Centro Comercial de Cedofeita, Porto"
         href="/duo/"
         src="/2020/duo/duocover.jpg"
@@ -101,11 +101,11 @@ import WorkCover from "../components/WorkCover.astro";
     </div>
     <article>
       <WorkCover
-        title="dunne"
+        title="dune"
         color="#FFFFFF"
-        label="Installation"
+        label="installation"
         name='"With Grandpa&apos;s Lab"'
-        local=" Fisga, Porto"
+        local=", Fisga, Porto"
         href="/dune/"
         src="/2020/dune/dunecover.jpg"
         alt="Matrix of light on textile."
@@ -116,8 +116,8 @@ import WorkCover from "../components/WorkCover.astro";
         title="wave"
         color="#FFFFFF"
         href="/wave/"
-        label="Collaborative installation with Gil Peixoto"
-        local="Ácida, Porto"
+        label="installation, collaboration with Gil Peixoto"
+        local=", Ácida, Porto"
         src="/2019/wave/wavecover.jpg"
         alt="A dark and abstract scenary."
       />
@@ -127,7 +127,7 @@ import WorkCover from "../components/WorkCover.astro";
         title="organismo vivo"
         color="var(--black-50)"
         href="/organismovivo/"
-        label="Installation, "
+        label="installation, "
         local="TETRIS III, Pérola Negra, Porto"
         src="/2019/organismovivo/organismovivocover.jpg"
         alt="Barbie up the wall."
@@ -138,7 +138,7 @@ import WorkCover from "../components/WorkCover.astro";
         title="mechanic drawing"
         color="var(--black-50)"
         href="/mechanicdrawing/"
-        label="Installation, "
+        label="installation, "
         local="TETRIS II, Porto"
         src="/2019/mechanicdrawing/mechanicdrawingcover.jpg"
         alt="Drawing robot."
@@ -154,8 +154,7 @@ import WorkCover from "../components/WorkCover.astro";
         title="sound machine"
         color="var(--black-50)"
         href="/soundmachine/"
-        label="Installation"
-        local="void"
+        label="installation"
         src="/2018/soundmachine/soundmachinecover.jpg"
         alt="Wooden robot in an angle."
       />
@@ -165,9 +164,10 @@ import WorkCover from "../components/WorkCover.astro";
 
 <style>
   .year-label {
-    padding-right: 1rem;
-    padding-top: 0.5rem;
-    margin-bottom: 0.75rem;
+    padding: 0;
+    margin-right: 7.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
     text-align: right;
   }
 
@@ -178,5 +178,18 @@ import WorkCover from "../components/WorkCover.astro";
     font-family: var(--font-brand);
     font-weight: 600;
     font-size: 1.625rem;
+  }
+
+  @media screen and (max-width: 576px) {
+    .year-label {
+      padding: 0;
+      margin-right: 1rem;
+      margin-bottom: 0.2rem;
+      margin-top: 0.2rem;
+    }
+
+    .year-label p {
+      font-size: 1rem;
+    }
   }
 </style>

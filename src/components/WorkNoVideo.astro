@@ -198,4 +198,55 @@ const {
     grid-column: 1 / span 2;
     grid-row: 4 / span 2;
   }
+
+  @media screen and (max-width: 576px) {
+    .page-wrapper {
+      padding: 0;
+    }
+
+    .page-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .image-right {
+      grid-column: 1 / 1;
+      grid-row: 1 / span 3;
+    }
+
+    .image-top-left {
+      grid-column: 1 / 1;
+      grid-row: 6 / 6;
+    }
+
+    .image-bot-left {
+      grid-column: 1 / 1;
+      grid-row: 5 / 5;
+    }
+
+    .image-bot {
+      grid-column: 1 / 1;
+      grid-row: 4 / 4;
+    }
+
+    .detail-wrapper {
+      grid-column: 1 / 1;
+      grid-row: 7 / 7;
+
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
+
+    .materials {
+      margin-bottom: 0;
+    }
+
+    .description {
+      grid-column: 1 / 1;
+      grid-row: 3 / 3;
+    }
+  }
 </style>
