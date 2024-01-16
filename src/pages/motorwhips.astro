@@ -1,0 +1,38 @@
+---
+// Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Work page component
+import WorkComponent from "../components/WorkPage.astro";
+
+const materials = ["wiper motors;", "red led strip;", "DC power supply."];
+
+const image1 = {
+  src: "/2023/motorwhips/motorwhips1.jpg",
+  alt: "Portrait light drag.",
+};
+
+const image2 = {
+  src: "/2023/motorwhips/motorwhips2.jpg",
+  alt: "Close up of the windscreen wiper.",
+};
+
+const image3 = {
+  src: "/2023/motorwhips/motorwhips3.jpg",
+  alt: "Geral shot of piece.",
+};
+---
+
+<BaseLayout>
+  <WorkComponent
+    name="motor whips"
+    year="2023"
+    materials={materials}
+    description="Kinetic light piece."
+    location="Porto."
+    imageLink1={image1}
+    imageLink2={image2}
+    imageLink3={image3}
+    videoLink="https://player.vimeo.com/video/903082743?h=8e70207b61&title=0&byline=0&portrait=0"
+  />
+</BaseLayout>
