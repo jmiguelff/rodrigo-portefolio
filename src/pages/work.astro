@@ -4,6 +4,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 // Work articles component
 import WorkCover from "../components/WorkCover.astro";
+
+// Import work images metadata
+import WorkImages from "../data/work-images.ts";
 ---
 
 <BaseLayout>
@@ -18,8 +21,9 @@ import WorkCover from "../components/WorkCover.astro";
         href="/motorwhips/"
         label="installation, "
         local="Porto"
-        src="/2023/motorwhips/motorwhipscover.jpg"
+        src={WorkImages.motorwhips.cover}
         alt="Overview of the motorwhips piece."
+        priority={true}
       />
     </article>
   </section>
@@ -35,7 +39,7 @@ import WorkCover from "../components/WorkCover.astro";
         label="installation, "
         name="Viagem ao Anti-Centro"
         local=", Espaço Ócio, Porto"
-        src="/2022/motorshell/motorshellcover.jpg"
+        src={WorkImages.motorshell.cover}
         alt="Overview of the exhibition at Ócio."
       />
     </article>
@@ -51,7 +55,7 @@ import WorkCover from "../components/WorkCover.astro";
         href="/movingcloth/"
         label="installation, "
         local="Limina, Porto"
-        src="/2020/movingcloth/movingclothcover.jpg"
+        src={WorkImages.movingcloth.cover}
         alt="Shape with cloth on top."
       />
     </article>
@@ -62,7 +66,7 @@ import WorkCover from "../components/WorkCover.astro";
         href="/presencamutavel/"
         name="Site-specific"
         local=", Limina, Porto"
-        src="/2020/presencaluminosamutavel/presencaluminosacover.jpg"
+        src={WorkImages.presencaluminosa.cover}
         alt="Lights from the ceiling."
       />
     </article>
@@ -72,7 +76,7 @@ import WorkCover from "../components/WorkCover.astro";
         color="var(--black-50)"
         href="/videoinstalacao/"
         label="video installation, Galeria Dentro, Porto"
-        src="/2020/videoinstalacao/videoinstalacaocover.jpg"
+        src={WorkImages.videoinstalacao.cover}
         alt="Wire in the middle of the room."
       />
     </article>
@@ -83,7 +87,7 @@ import WorkCover from "../components/WorkCover.astro";
         href="/videoinstalacao/"
         label="video installation,"
         local="Galeria Dentro, Porto"
-        src="/2020/presencamutavel/presencamutavelcover.jpg"
+        src={WorkImages.presencamutavel.cover}
         alt="Shape getting out of a wall."
       />
     </article>
@@ -94,7 +98,7 @@ import WorkCover from "../components/WorkCover.astro";
         label="installation, "
         local="Ácida, Porto"
         href="/diodo/"
-        src="/2020/diodo/diodocover.jpg"
+        src={WorkImages.diodo.cover}
         alt="Dark image of diodo installation."
       />
     </article>
@@ -106,7 +110,7 @@ import WorkCover from "../components/WorkCover.astro";
         name='"Finding a CLICK in a haystack"'
         local=", Centro Comercial de Cedofeita, Porto"
         href="/duo/"
-        src="/2020/duo/duocover.jpg"
+        src={WorkImages.duo.cover}
         alt="Duo exhibition machines."
       />
     </article>
@@ -123,7 +127,7 @@ import WorkCover from "../components/WorkCover.astro";
         name='"With Grandpa&apos;s Lab"'
         local=", Fisga, Porto"
         href="/dune/"
-        src="/2020/dune/dunecover.jpg"
+        src={WorkImages.dune.cover}
         alt="Matrix of light on textile."
       />
     </article>
@@ -134,7 +138,7 @@ import WorkCover from "../components/WorkCover.astro";
         href="/wave/"
         label="installation, collaboration with Gil Peixoto"
         local=", Ácida, Porto"
-        src="/2019/wave/wavecover.jpg"
+        src={WorkImages.wave.cover}
         alt="A dark and abstract scenary."
       />
     </article>
@@ -145,7 +149,7 @@ import WorkCover from "../components/WorkCover.astro";
         href="/organismovivo/"
         label="installation, "
         local="TETRIS III, Pérola Negra, Porto"
-        src="/2019/organismovivo/organismovivocover.jpg"
+        src={WorkImages.organismovivo.cover}
         alt="Barbie up the wall."
       />
     </article>
@@ -156,7 +160,7 @@ import WorkCover from "../components/WorkCover.astro";
         href="/mechanicdrawing/"
         label="installation, "
         local="TETRIS II, Porto"
-        src="/2019/mechanicdrawing/mechanicdrawingcover.jpg"
+        src={WorkImages.mechanicdrawing.cover}
         alt="Drawing robot."
       />
     </article>
@@ -171,7 +175,7 @@ import WorkCover from "../components/WorkCover.astro";
         color="var(--black-50)"
         href="/soundmachine/"
         label="installation"
-        src="/2018/soundmachine/soundmachinecover.jpg"
+        src={WorkImages.soundmachine.cover}
         alt="Wooden robot in an angle."
       />
     </article>
