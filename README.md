@@ -1,44 +1,69 @@
-# Rodrigo Arosos Portefolio Webiste
+# Rodrigo Aroso Portfolio
 
-Under construction...
+Portfolio website built with [Astro](https://astro.build/).
 
-Developed using Astro framework.
+## Requirements
 
-## 🚀 Project Structure
+- Node.js 22
+- npm
+- Docker Engine with Docker Compose for staging deployment
 
-Basic Astro project structure
+## Local development
 
-```
-/
-├── public/
-├── src/
-│   └── components/
-│       └── MainHead.astro
-│       └── Nav.astro
-│   └── layouts/
-│       └── BaseLayout.astro
-│   └── pages/
-│       └── index.astro
-│   └── styles/
-│       └── global.css
-└── package.json
+Install the dependencies and start the development server:
+
+```bash
+npm ci
+npm run dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Create and preview a production build before opening a pull request:
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```bash
+npm run build
+npm run preview
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+## Project structure
 
-## 🧞 Commands
+- `src/pages/` — website routes and page content
+- `src/components/` — reusable Astro components
+- `src/styles/` — global styling
+- `public/` — images, videos, and fonts
 
-All commands are run from the root of the project, from a terminal:
+## Branch and deployment workflow
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+- `master` is the production branch.
+- `staging` is the integration branch and is deployed to [ra.wastelabs.net](https://ra.wastelabs.net).
+- Short-lived `feature/*`, `chore/*`, and `fix/*` branches are created from `staging` and merged back into `staging` when ready.
+- After changes have been validated in staging, `staging` can be promoted to `master` for production.
+
+The staging site runs on the Raspberry Pi homelab with Docker. Cloudflare Tunnel exposes the container at `ra.wastelabs.net` without opening it directly to the internet.
+
+Typical change flow:
+
+```text
+feature/*, chore/*, or fix/*
+              ↓
+           staging
+              ↓
+     ra.wastelabs.net
+              ↓
+            master
+```
+
+## Manual staging deployment
+
+After merging changes into `staging`, update the checkout on the Raspberry Pi and rebuild the container:
+
+```bash
+cd /opt/homelab/apps/rodrigo-portefolio
+git fetch origin
+git switch staging
+git pull --ff-only origin staging
+docker compose up -d --build
+docker compose ps
+docker compose logs --tail=100 portfolio
+```
+
+Cloudflare Tunnel forwards `ra.wastelabs.net` to the local service exposed by `compose.yaml` on port `8081`.
