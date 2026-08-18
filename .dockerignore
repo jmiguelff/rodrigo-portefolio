@@ -1,0 +1,32 @@
+# Version control
+.git
+.gitignore
+.github
+
+# Dependencies and generated output
+node_modules
+dist
+.astro
+coverage
+
+# Editors and operating-system files
+.vscode
+.idea
+.DS_Store
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Local environment files and secrets
+.env
+.env.*
+!.env.example
+
+# Files not required by the application build
+compose*.yaml
+compose*.yml
+README.md
