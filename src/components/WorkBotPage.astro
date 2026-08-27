@@ -1,6 +1,8 @@
 ---
+import { Picture } from "astro:assets";
+
 interface ImageProp {
-  src: string;
+  src: ImageMetadata;
   alt: string;
 }
 
@@ -48,17 +50,25 @@ const {
       </div>
     </div>
     <div class="image-left">
-      <img
+      <Picture
         src={imageLink1.src}
-        loading="lazy"
+        formats={["avif", "webp"]}
+        widths={[480, 768, 1024, 1440, 1920]}
+        sizes="(max-width: 576px) 100vw, 50vw"
+        quality="high"
+        priority={false}
         alt={imageLink1.alt}
         class="right-image"
       />
     </div>
     <div class="image-right">
-      <img
+      <Picture
         src={imageLink2.src}
-        loading="lazy"
+        formats={["avif", "webp"]}
+        widths={[480, 768, 1024, 1440, 1920]}
+        sizes="(max-width: 576px) 100vw, 50vw"
+        quality="high"
+        priority={false}
         alt={imageLink2.alt}
         class="left-image"
       />

@@ -5,6 +5,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 // Work page component
 import WorkComponent from "../components/WorkPage.astro";
 
+// Work images metadata
+import WorkImages from "../data/work-images.ts";
+
 const materials = [
   "weights;",
   "construction safety net;",
@@ -14,17 +17,17 @@ const materials = [
 ];
 
 const image1 = {
-  src: "/2019/wave/waveimage1.jpg",
+  src: WorkImages.wave.gallery[0],
   alt: "Detail of the wave piece.",
 };
 
 const image2 = {
-  src: "/2019/wave/waveimage2.jpg",
+  src: WorkImages.wave.gallery[1],
   alt: "Geral shot of piece, blue lighting.",
 };
 
 const image3 = {
-  src: "/2019/wave/waveimage3.jpg",
+  src: WorkImages.wave.gallery[2],
   alt: "Geral shot of piece, red lighting.",
 };
 ---

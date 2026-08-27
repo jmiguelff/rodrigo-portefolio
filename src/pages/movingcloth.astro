@@ -5,20 +5,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 // Work page component
 import WorkComponent from "../components/WorkPage.astro";
 
+// Work images metadata
+import WorkImages from "../data/work-images.ts";
+
 const materials = ["cloth;", "pine beam;", "DC motors."];
 
 const image1 = {
-  src: "/2020/movingcloth/movingclothimage1.jpg",
+  src: WorkImages.movingcloth.gallery[0],
   alt: "Outside shot of the piece.",
 };
 
 const image2 = {
-  src: "/2020/movingcloth/movingclothimage2.jpg",
+  src: WorkImages.movingcloth.gallery[1],
   alt: "Close up shot.",
 };
 
 const image3 = {
-  src: "/2020/movingcloth/movingclothimage3.jpg",
+  src: WorkImages.movingcloth.gallery[2],
   alt: "Close up shot from behind.",
 };
 ---

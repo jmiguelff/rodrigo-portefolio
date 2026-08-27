@@ -5,6 +5,9 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 // Work page component
 import WorkComponent from "../components/WorkPage.astro";
 
+// Work images metadata
+import WorkImages from "../data/work-images.ts";
+
 const materials = [
   "paper;",
   "pine beam;",
@@ -16,17 +19,17 @@ const materials = [
 ];
 
 const image1 = {
-  src: "/2019/mechanicdrawing/mechanicdrawingimage1.jpg",
+  src: WorkImages.mechanicdrawing.gallery[0],
   alt: "Two drawing robots, frontal shot.",
 };
 
 const image2 = {
-  src: "/2019/mechanicdrawing/mechanicdrawingimage2.jpg",
+  src: WorkImages.mechanicdrawing.gallery[1],
   alt: "Two drawing robots from top.",
 };
 
 const image3 = {
-  src: "/2019/mechanicdrawing/mechanicdrawingimage3.jpg",
+  src: WorkImages.mechanicdrawing.gallery[2],
   alt: "Close up top view of the drawing robot.",
 };
 ---

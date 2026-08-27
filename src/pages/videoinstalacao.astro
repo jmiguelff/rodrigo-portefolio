@@ -6,27 +6,30 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import WorkComponentTop from "../components/WorkTopPage.astro";
 import WorkComponentBot from "../components/WorkBotPage.astro";
 
+// Work images metadata
+import WorkImages from "../data/work-images.ts";
+
 const materialsTop = ["metal rod."];
 
 const image1Top = {
-  src: "/2020/videoinstalacao/videoinstalacao1.jpg",
+  src: WorkImages.videoinstalacao.gallery[0],
   alt: "Side view of the piece in the space.",
 };
 
 const image2Top = {
-  src: "/2020/videoinstalacao/videoinstalacao2.jpg",
+  src: WorkImages.videoinstalacao.gallery[1],
   alt: "Overview of the piece.",
 };
 
 const materialsBot = ["Cloth;", "DC motors;", "Beams."];
 
 const image1Bot = {
-  src: "/2020/presencamutavel/presencamutavel1.jpg",
+  src: WorkImages.presencamutavel.gallery[0],
   alt: "Detail of the piece.",
 };
 
 const image2Bot = {
-  src: "/2020/presencamutavel/presencamutavel2.jpg",
+  src: WorkImages.presencamutavel.gallery[1],
   alt: "Overview of the piece.",
 };
 ---

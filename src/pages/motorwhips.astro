@@ -5,20 +5,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 // Work page component
 import WorkComponent from "../components/WorkPage.astro";
 
+// Work images metadata
+import WorkImages from "../data/work-images.ts";
+
 const materials = ["wiper motors;", "red led strip;", "DC power supply."];
 
 const image1 = {
-  src: "/2023/motorwhips/motorwhips1.jpg",
+  src: WorkImages.motorwhips.gallery[0],
   alt: "Portrait light drag.",
 };
 
 const image2 = {
-  src: "/2023/motorwhips/motorwhips2.jpg",
+  src: WorkImages.motorwhips.gallery[1],
   alt: "Close up of the windscreen wiper.",
 };
 
 const image3 = {
-  src: "/2023/motorwhips/motorwhips3.jpg",
+  src: WorkImages.motorwhips.gallery[2],
   alt: "Geral shot of piece.",
 };
 ---

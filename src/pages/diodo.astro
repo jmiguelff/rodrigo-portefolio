@@ -5,20 +5,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 // Work page component
 import WorkComponent from "../components/WorkPage.astro";
 
+// Work images metadata
+import WorkImages from "../data/work-images.ts";
+
 const materials = ["laser diodes;", "speakers;", "mirror;", "latex."];
 
 const image1 = {
-  src: "/2020/diodo/diodoimage1.jpg",
+  src: WorkImages.diodo.gallery[0],
   alt: "Close up of the laser.",
 };
 
 const image2 = {
-  src: "/2020/diodo/diodoimage2.jpg",
+  src: WorkImages.diodo.gallery[1],
   alt: "Shot of the laser.",
 };
 
 const image3 = {
-  src: "/2020/diodo/diodoimage3.jpg",
+  src: WorkImages.diodo.gallery[2],
   alt: "Ambient shot of the piece.",
 };
 ---

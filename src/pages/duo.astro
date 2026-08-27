@@ -5,20 +5,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 // Work page component
 import WorkComponent from "../components/WorkPage.astro";
 
+// Work images metadata
+import WorkImages from "../data/work-images.ts";
+
 const materials = ["white lycra;", "pine beam;", "8 DC motors;", "Arduino."];
 
 const image1 = {
-  src: "/2020/duo/duoimage1.jpg",
+  src: WorkImages.duo.gallery[0],
   alt: "Detail of the textile on top of the robot.",
 };
 
 const image2 = {
-  src: "/2020/duo/duoimage2.jpg",
+  src: WorkImages.duo.gallery[1],
   alt: "Geral shot of the robots on the floor.",
 };
 
 const image3 = {
-  src: "/2020/duo/duoimage3.jpg",
+  src: WorkImages.duo.gallery[2],
   alt: "Close up of the robots.",
 };
 ---
